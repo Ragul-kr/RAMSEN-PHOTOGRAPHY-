@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Card Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            color: black;
+            width: 300px;
+            position: absolute;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- calendar card -->
+    <div class="card" id="calendar-card" style="display: none;">
+        <div style="background-color: #3498db;color: #fff;padding: 20px;">
+            <h2>Calendar Form</h2>
+        </div>
+        <div style="padding: 20px;">
+            <form id="booking-calendar" action="user-image-input.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="table_name" value="booking-calendar">
+                <input style="width: 100%;padding: 8px;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 10px;color: black;
+                               font-size: 1vw;" 
+                        type="text" id="name" name="name" placeholder="Name">
+                <input style="width: 100%;padding: 8px;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 10px;"
+                    type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
+                <!-- <small>Format: 123-456-7890</small> -->
+                <input style="width: 100%;padding: 8px;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 10px;"
+                    type="email" id="email" name="email" placeholder="Email">
+                <button type="button" onclick="submitForm('booking-calendar')">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- frame card -->
+    <div class="card" id="frame-card" style="display: none;">
+        <div style="background-color: #3498db;color: #fff;padding: 20px;">
+            <h2>Frame Form</h2>
+        </div>
+        <div style="padding: 20px;">
+            <form id="booking-frame" action="user-image-input.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="table_name" value="booking-calendar">
+                <input style="width: 100%;padding: 8px;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 10px;" 
+                        type="text" id="name" name="name" placeholder="Name" required>
+                <input style="width: 100%;padding: 8px;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 10px;"
+                    type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" required>
+                <small>Format: 123-456-7890</small>
+                <input style="width: 100%;padding: 8px;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 10px;"
+                    type="email" id="email" name="email" placeholder="Email" required>
+                <button type="button" onclick="submitForm('booking-frame')">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+function submitForm(formId) {
+    localStorage.setItem('currentFormId', formId);
+    document.getElementById(formId).submit();
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const currentFormId = localStorage.getItem('currentFormId');
+    if (currentFormId === 'booking-calendar') {
+        document.getElementById('calendar-card').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    } else if (currentFormId === 'booking-frame') {
+        document.getElementById('frame-card').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    } else {
+        console.log('Form ID does not match');
+    }
+    localStorage.removeItem('currentFormId');
+});
+    </script>
+</body>
+</html>

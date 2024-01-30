@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+    #custom-image-calendar {
+            background-size: cover;
+            border: 1px solid #4e4e4e;
+            position: relative;
+            z-index: 10;
+            margin-top: -40.80%;
+            margin-left: 5.20%;
+            width:21vw;
+            height: 12vw;
+            background-color: transparent;
+        }
+        #custom-image-frame {
+            background-size: cover;
+            border: 1px solid #4e4e4e;
+            position: relative;
+            z-index: 10;
+            margin-top: -21.80%;
+            margin-left: 48.20%;
+            width:9.15%;
+            height: 115.5%;
+            background-color: transparent;
+        }
+
+        </style>
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cinzel&family=Cormorant:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cinzel&family=Cormorant:wght@300&family=DM+Sans:opsz,wght@9..40,200&family=Quicksand:wght@300&family=Text+Me+One&display=swap" rel="stylesheet">
+         <!-- fonts -->
+    </head>
+    <body style="overflow-x: hidden;">
+<div>      
+  <!-- header -->
+<div style="font-size: 0.70vw;display: flex;flex-direction: row;transform: translateY(10%);opacity: 0;animation: fadeIn 2s 2s forwards;">
+    <div style="gap: 47%;display: flex;flex-direction: row;transform: translateX(2vw) translateY(2.8vw);">
+        <h1 style="color: rgb(132, 86, 1);text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 200;font-family: 'Muli', sans-serif;">Home</h1>
+        <h1 style="color: rgb(0, 0, 0);text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 200;font-family: 'Muli', sans-serif;">blog</h1>
+        <h1 style="color: rgb(142, 93, 2);text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 200;font-family: 'Muli', sans-serif;">Events</h1>
+    </div>
+    <div style="margin-left: 26%;margin-top: 1.3%;">
+        <h1 class="ramsen-title" style="color: rgb(0, 0, 0);text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);font-weight: 500;font-size: 2.3vw;
+                  font-family: 'Bodoni Moda', serif;">RAMSEN&nbsp;PHOTOGRAPHY<br>
+           <p style="font-size: 1.1vw;font-family: 'Caveat', cursive;animation: fadeIn 3s 2s forwards;opacity: 0;font-weight: 200;
+             margin-top: -2%;margin-left: 33%;"><text style="color: transparent;"></text>&nbsp;-&nbsp;we&nbsp;frame&nbsp;your&nbsp;joy&nbsp;&nbsp;-</p></h1>
+      </div>
+      <div style="gap: 47%;display: flex;flex-direction: row;transform: translateX(10.5vw) translateY(2.8vw);">
+        <h1 style="color: rgb(132, 86, 1);text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 200;font-family: 'Muli', sans-serif;">Info</h1>
+        <h1 style="color: rgb(0, 0, 0);text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 200;font-family: 'Muli', sans-serif;">contact</h1>
+        <h1 style="color: rgb(142, 93, 2);text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 200;font-family: 'Muli', sans-serif;">About</h1>
+    </div>
+</div>
+<div style="display: flex;align-items: center;justify-content: center;height: 60vh;text-align: center;animation: fadeout 2s 1s forwards;position: absolute;">
+    <h1 style="font-weight: 596;font-size: 4vw;opacity: 1; display: flex;align-items: center;justify-content: center; margin-left:150%;
+    font-family: 'Caveat', cursive;pointer-events: none;">RAMSEN&nbsp;PHOTOGRAPHY</h1>
+</div>
+  <!-- header -->
+  <div style="margin-top: 5%;text-align: center;">
+   <text style="font-family: 'DM Sans', sans-serif;font-size: 2vw;">&nbsp;&nbsp;Let's try something!</text>
+  <div style="display: flex;flex-direction: row;gap: 8%;justify-content: center;align-items: center;margin-left: -2%;">
+  <img src="calendar-icon.jpg" style="width: 18%;height: auto;pointer-events: none;">
+  <img src="photomug(2).png" style="width: 15%;height: auto;pointer-events: none;">
+  <img src="postcard.png" style="width: 15%;height: auto;pointer-events: none;">
+</div>
+  <div style="display: flex;flex-direction: row;gap: 5%;justify-content: center;align-items: center;margin-top: 2%;margin-left: -7%;">
+    <img src="frame-card.png" style="width: 21%;height: auto;pointer-events: none;">
+    <img src="photobook.png" style="width: 20%;height: auto;pointer-events: none;">
+    <img src="poster.png" style="width: 10%;margin-top: -3%;height: auto;pointer-events: none;">
+  </div>
+  <!-- Calendar-->
+<div id="target" style="display: flex; flex-direction: row;background-color: #f4abab;margin-top: 10%; margin-left: -70%;">
+  <h1 style="color: rgb(0, 0, 0); text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35); font-weight: 740; font-size: 4vw;
+      font-family: 'Bodoni Moda', serif; ">CALENDAR<br>
+      <div>
+          <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 28%; margin-top: 4%; font-size: 2.3vw; position: absolute;">Yearly calendar<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+              <br><text style="font-size: 2vw;">12 X 18''</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">mat black</text>
+              <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">"Organize&nbsp;your&nbsp;year<br>with&nbsp;style! "</text></text>
+      </div>
+      <div>
+          <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 55%; margin-top: 4%; font-size: 2vw; position: absolute;">Customize&nbsp;your&nbsp;calendar<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+              <br><text style="font-size: 2vw;">input1</text><br><br>
+              <label for="calendarImageInput"><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">Upload image</text></label>
+              <br>
+              <input type="file" name="uploadfile" id="calendarImageInput" style="" accept="image/*"/>
+              <br><br><br><button onclick="showForm('booking-calendar')">buy your own!</button>
+            </text>
+      </div>
+      <div id="main-image-calendar">
+          <img id="mainImage-1" src="calendar.png" style="width: 15%; margin-left: 6%;margin-top: 1%;" alt="calendar">
+          <div id="mainDiv" style="display: flex; flex-direction: row; gap: 3%; justify-content: center; margin-left: 5%;margin-top: 1%;">
+            <img onclick="changeImage('1','1', 'calendar.png')" src="calendar.png" style="width: 2%;" alt="Thumbnail 1">
+            <img onclick="changeImage('1','2', 'calendar-wall-2.jpg')" src="calendar-wall-2.jpg" style="width: 2%;" alt="Thumbnail 2">
+            <img onclick="changeImage('1','3', 'calendar-wall.jpg')" src="calendar-wall.jpg" style="width:2%;" alt="Thumbnail 3">
+        </div>
+        <div style="display: flex;justify-content: center;align-items: center;">
+          <div id="custom-image-calendar" style="background-color: #000000;"><h1 style="color: transparent;font-size: 1vw;">k</h1></div>        
+        </div>
+    </h1>
+  </div>
+
+
+<!-- Photomug -->
+<div style="display: flex; flex-direction: row; margin-top: 0%;position: relative;">
+  <h1 class="ramsen-title" style="color: rgb(0, 0, 0); text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35); font-weight: 740; font-size: 4vw;
+      font-family: 'Bodoni Moda', serif; margin-top: 10%; margin-left: -70%;">PHOTOMUG<br>
+      <div>
+          <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 28%; margin-top: 4%; font-size: 2.3vw; position: absolute;">Printed Photomug<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+              <br><text style="font-size: 2vw;">12 X 18''</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">silky white</text>
+              <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">"Get&nbsp;your&nbsp;printed<br>photomug&nbsp;style! "</text></text>
+      </div>
+      <div>
+          <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 55%; margin-top: 4%; font-size: 2vw; position: absolute;">Customize&nbsp;your&nbsp;photomug<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+              <br><text style="font-size: 2vw;">input1</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">input2</text>
+              <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">" "</text></text>
+      </div>
+      <div id="main-image-photomug">
+          <img id="mainImage-2" src="photomug(2).png" style="width: 15%; margin-left: 6%;" alt="photomug">
+          <div style="display: flex; flex-direction: row; gap: 3%; justify-content: center; margin-left: 5%;">
+              <img onclick="changeImage('2','4', 'poster.png')" src="poster.png" style="width: 3%;" alt="Thumbnail 1">
+              <img onclick="changeImage('2','5', 'photomug(2).png')" src="photomug(2).png" style="width: 3%;" alt="Thumbnail 2">
+              <img onclick="changeImage('2','6','photo-frame.png')" src="photo-frame.png" style="width: 3%;" alt="Thumbnail 3">
+          </div>
+      </div>
+  </h1>
+</div>
+<!-- card -->
+<div>
+  <h1 class="ramsen-title" style="color: rgb(0, 0, 0);text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);font-weight: 740;font-size: 4vw;
+font-family: 'Bodoni Moda', serif;margin-top: 10%;margin-left: -70%;">CARD<br>
+      <div>
+        <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 28%; margin-top: 4%; font-size: 2.3vw; position: absolute;">Printed cards<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+            <br><text style="font-size: 2vw;">12 X 18''</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">silky white</text>
+            <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">"Get&nbsp;your&nbsp;printed<br>card&nbsp;style! "</text></text>
+    </div>
+    <div>
+        <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 55%; margin-top: 4%; font-size: 2vw; position: absolute;">Customize&nbsp;your&nbsp;cards<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+            <br><text style="font-size: 2vw;">input1</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">input2</text>
+            <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">" "</text></text>
+    </div>
+    <div id="main-image-card">
+        <img id="mainImage-3" src="poster.png" style="width: 15%; margin-left: 6%;" alt="photomug">
+        <div style="display: flex; flex-direction: row; gap: 3%; justify-content: center; margin-left: 5%;">
+            <img onclick="changeImage('3','7','poster.png')" src="poster.png" style="width: 3%;" alt="Thumbnail 1">
+            <img onclick="changeImage('3','8', 'wedding-card.png')" src="wedding-card.png" style="width: 3%;" alt="Thumbnail 2">
+            <img onclick="changeImage('3','9', 'wedding-card(2).png')" src="wedding-card(2).png" style="width: 3%;" alt="Thumbnail 3">
+        </div>
+    </div>
+    </h1>
+</div>
+<!-- photo-frame -->
+<div>
+<h1 class="ramsen-title" style="color: rgb(0, 0, 0);text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);font-weight: 740;font-size: 4vw;
+font-family: 'Bodoni Moda', serif;margin-top: 10%;margin-left: -70%;">PHOTOFRAME<br>
+      <div>
+        <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 28%; margin-top: 4%; font-size: 2.3vw; position: absolute;">Printed Photoframe<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+            <br><text style="font-size: 2vw;">12 X 18''</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">silky white</text>
+            <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">"Get&nbsp;your&nbsp;printed<br>photoframe&nbsp;style! "</text></text>
+    </div>
+    <div>
+        <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 55%; margin-top: 4%; font-size: 2vw; position: absolute;">Customize&nbsp;your&nbsp;Frame<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+            <br><text style="font-size: 2vw;">input1</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">input2</text>
+            <br><br><br>
+            <label for="frameImageInput"><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">Upload image</text></label>
+            <br>
+            <input type="file" name="uploadfile" id="frameImageInput" style="" accept="image/*"/>
+            <br><br><br><button onclick="showForm('booking-frame')">buy your own!</button>
+          </text>
+    </div>
+    <div id="main-image-photoframe">
+        <img id="mainImage-4" src="photo-frame.png" style="width: 14%; margin-left: 6%;" alt="photomug">
+        <div style="display: flex; flex-direction: row; gap: 3%; justify-content: center; margin-left: 5%;">
+            <img onclick="changeImage('4','10', 'photo-frame.png')" src="photo-frame.png" style="width: 3%;" alt="Thumbnail 1">
+            <img onclick="changeImage('4','11', 'frame-wall.jpg')" src="frame-wall.jpg" style="width: 3%;" alt="Thumbnail 2">
+            <img onclick="changeImage('4', '12','frame-wall-2.jpg')" src="frame-wall-2.jpg" style="width: 3%;" alt="Thumbnail 3">
+             <!-- Add more thumbnail images as needed -->
+        </div>
+    </div>
+    <div id="custom-image-frame" style=""><h1 style="color: transparent;">k</h1></div>
+
+    </h1>
+</div> 
+<!-- photobook -->
+<!-- <div>
+<h1 class="ramsen-title" style="color: rgb(0, 0, 0);text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);font-weight: 740;font-size: 4vw;
+font-family: 'Bodoni Moda', serif;margin-top: 10%;margin-left: -70%;">PHOTOBOOK<br>
+      <div>
+        <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 28%; margin-top: 4%; font-size: 2.3vw; position: absolute;">Printed Photobook<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+            <br><text style="font-size: 2vw;">12 X 18''</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">silky white</text>
+            <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">"Get&nbsp;your&nbsp;printed<br>photobook&nbsp;style! "</text></text>
+    </div>
+    <div>
+        <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 55%; margin-top: 4%; font-size: 2vw; position: absolute;">Customize&nbsp;your&nbsp;photomug<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+            <br><text style="font-size: 2vw;">input1</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">input2</text>
+            <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">" "</text></text>
+    </div>
+    <div id="main-image-photobook">
+        <img id="mainImage-5" src="R:\PROJECT\ramsen\photomug(2).png" style="width: 15%; margin-left: 6%;" alt="photomug">
+        <div style="display: flex; flex-direction: row; gap: 3%; justify-content: center; margin-left: 5%;">
+            <img onclick="changeImage('5', 'poster.png')" src="poster.png" style="width: 3%;" alt="Thumbnail 1">
+            <img onclick="changeImage('5', 'photomug(2).png')" src="photomug(2).png" style="width: 3%;" alt="Thumbnail 2">
+            <img onclick="changeImage('5', 'photo-frame.png')" src="photo-frame.png" style="width: 3%;" alt="Thumbnail 3">
+        </div>
+    </div>
+    </h1>
+</div> -->
+<!-- prints&posters -->
+<!-- <div>
+  <h1 class="ramsen-title" style="color: rgb(0, 0, 0);text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);font-weight: 740;font-size: 4vw;
+  font-family: 'Bodoni Moda', serif;margin-top: 10%;margin-left: -70%;">PRINTS & POSTERS<br>
+        <div>
+          <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 28%; margin-top: 4%; font-size: 2.3vw; position: absolute;">Printed Posters<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+              <br><text style="font-size: 2vw;">12 X 18''</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">silky white</text>
+              <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">"Get&nbsp;your&nbsp;printed<br>posters&nbsp;style! "</text></text>
+      </div>
+      <div>
+          <text style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.1vw; margin-left: 55%; margin-top: 4%; font-size: 2vw; position: absolute;">Customize&nbsp;your&nbsp;photomug<br><text style="font-size: 1.3vw; color: #6a6969;">starting&nbsp;at&nbsp;100&nbsp;Rs</text>
+              <br><text style="font-size: 2vw;">input1</text><br><text style="font-size: 1.5vw; background-color: rgb(230, 228, 228); padding: 1%;">input2</text>
+              <br><br><br><text style="font-size: 1.2vw; color: #6d6c6c;">" "</text></text>
+      </div>
+      <div id="main-image-poster">
+          <img id="mainImage-6" src="R:\PROJECT\ramsen\photomug(2).png" style="width: 15%; margin-left: 6%;" alt="photomug">
+          <div style="display: flex; flex-direction: row; gap: 3%; justify-content: center; margin-left: 5%;">
+              <img onclick="changeImage('6', 'poster.png')" src="poster.png" style="width: 3%;" alt="Thumbnail 1">
+              <img onclick="changeImage('6', 'photomug(2).png')" src="photomug(2).png" style="width: 3%;" alt="Thumbnail 2">
+              <img onclick="changeImage('6', 'photo-frame.png')" src="photo-frame.png" style="width: 3%;" alt="Thumbnail 3">
+          </div>
+      </div>
+      </h1>
+  </div>
+  </div> -->
+
+
+<!-- footer -->
+<div style="display: flex;flex-direction: column;background-color: rgb(255, 246, 237);margin-top: 30%;">
+    <p style="font-weight: 50;font-size: 2.5vw;font-family: 'Text Me One', sans-serif;margin-top: 5%;">RAMSEN PHOTOGRAPHY</p>
+    <div style="display: flex;flex-direction: column;margin-top: 1%;margin-left: 12%;">
+      <img src="line.png" style="width: 8%;margin-top: -0.2%;margin-left: 18.5%;padding: 0px;pointer-events: none;">
+      <img src="line.png" style="width: 7.5%;height: auto;margin-left: 28.5%;pointer-events: none;">
+      <img src="line.png" style="width: 8.6%;margin-top: -0.2%;margin-left: 38.5%;padding: 0px;pointer-events: none;">
+      <img src="line.png" style="width: 7%;margin-top: -0.2%;margin-left: 49.5%;padding: 0px;pointer-events: none;">
+      <img src="line.png" style="width: 8%;margin-top: -0.2%;margin-left: 59.5%;padding: 0px;pointer-events: none;">
+
+    </div>
+    <div style="display: flex;flex-direction: column;margin-left: 13%;">
+      <text style="margin-top: 1%;margin-left: -58%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">Home</text>
+      <text style="margin-top: -3%;margin-left: -37%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">services<br><p style="font-size: 0.9vw;margin-left: -1.7%;">wedding<br>puberty<br>outdoor<br>&emsp;babyshoot</p></text>
+        <text style="margin-top: -10.2%;margin-left: -15.5%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">company<br><p style="font-size: 0.9vw;margin-left: -1.8%;">about<br>contact<br>info</p></text>
+        <text style="margin-top: -8.7%;margin-left: 4%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">blog<br><p style="font-size: 0.9vw;margin-left: 1%;">view gallery</p></text>
+        <text style="margin-top: -6.4%;margin-left: 26%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">booking<br><p style="font-size: 0.9vw;margin-left: 1%;">view gallery</p></text>
+
+      </div>
+      <text style="margin-top: 9%;font-size: 0.1vw;background-color: #000000;">................................................</text>
+      <text style="font-family: 'DM Sans', sans-serif;text-align: center;">Wedding | Puberty | outdoor | babyshoot | All events</text>
+      <!-- <text style="margin-top: 8%;margin-left: -35%;font-family: 'DM Sans', sans-serif;font-weight: 500;font-size: 2vw;">chat with us!</text>
+      <div style="width: 15vw;height: 4.5vh;border: 1px solid black;
+      border-radius: 2px;
+      margin: 0.625rem auto;"></div> -->
+  </div>
+<!-- footer -->
+</div>  
+<script>
+        // Ramsen text expand sideways
+        document.addEventListener("DOMContentLoaded", function() {
+      var text = document.querySelector(".text");
+      // Add a delay, for example, 2000 milliseconds (2 seconds) before showing the element
+      setTimeout(function() {
+        text.classList.remove("hidden");
+      }, 1000);
+    });
+    // Ramsen text expand sideways
+//image  input from user
+    // calendar image input
+    document.getElementById('calendarImageInput').addEventListener('change', function (e) {
+        handleImageInputChange(e, 'custom-image-calendar');
+    });
+    // frame image input
+    document.getElementById('frameImageInput').addEventListener('change', function (e) {
+        handleImageInputChange(e, 'custom-image-frame');
+    });
+    //function to handle image input change
+    function handleImageInputChange(e, targetElementId) {
+        const fileInput = e.target;
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const imageUrl = e.target.result;
+                document.getElementById(targetElementId).style.backgroundImage = 'url(' + imageUrl + ')';
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+    // image input from user
+
+// product gallery-calendar,photomug,...
+    function changeImage(galleryId,thumbnail,newImagePath) {
+        var mainImageId = "mainImage-" + galleryId;
+        document.getElementById(mainImageId).src = newImagePath;
+
+        // custom-image-calendar 
+        var customImagecalendar = document.getElementById('custom-image-calendar');
+        switch (thumbnail) {
+            case '1':
+                customImagecalendar.style.width = '21vw';
+                customImagecalendar.style.height = '12vw';
+                customImagecalendar.style.marginLeft = '5.20%';
+                customImagecalendar.style.marginTop = '-40.80%';
+                break;
+            case '2':
+                customImagecalendar.style.width = '3.14%';
+                customImagecalendar.style.height = '3.5%';
+                customImagecalendar.style.marginLeft = '11.45%';
+                customImagecalendar.style.marginTop = '-25.87%';
+                break;
+            case '3':
+                customImagecalendar.style.width = '4.45%';
+                customImagecalendar.style.height = '5vw';
+                customImagecalendar.style.marginLeft = '3.75%';
+                customImagecalendar.style.marginTop = '-45.90%';
+                break;
+        }
+       // custom-image-frame
+       var customImageframe = document.getElementById('custom-image-frame');
+        switch (thumbnail) {
+                case '10':
+                customImageframe.style.width = '9.15%';
+                customImageframe.style.height = '115.5%';
+                customImageframe.style.marginLeft = '48.20%';
+                customImageframe.style.marginTop = '-21.80%';
+                break;  
+                case '11':
+                customImageframe.style.width = '1.6%';
+                customImageframe.style.height = '4.2vw';
+                customImageframe.style.marginLeft = '54.25%';
+                customImageframe.style.marginTop = '-13.26%';
+                break;  
+                case '12':
+                customImageframe.style.width = '4.7%';
+                customImageframe.style.height = '11.8vw';
+                customImageframe.style.marginLeft = '49.87%';
+                customImageframe.style.marginTop = '-23.5%';
+                break;  
+        }
+
+    }
+ // product gallery-calendar,photomug,...
+ // userimage input ,get formId and pass
+ function showForm(formId) {
+      // Redirect to the next page
+      window.location.href = 'user-image-input.html';
+    // Save form ID to localStorage
+    localStorage.setItem('currentFormId', formId);
+}
+ // userimage input ,get formId and pass
+
+        // Scroll to the target element with ID 'targetElement' once the page has loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('targetElement').scrollIntoView({ behavior: 'smooth' });
+        });
+        // Scroll to the target element with ID 'targetElement' once the page has loaded
+
+// get formId and pass
+
+// get formId and pass
+</script>
+    </body>
+</html>

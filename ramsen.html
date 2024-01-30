@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your HTML Page</title>
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+
+@keyframes bgcolor{
+  from{
+    background-color: #000000;
+  }
+  to{
+    background-color: #ffffff;
+  }
+}
+ body {
+  /* user-select: none; */
+  background-color: #000000;
+/* animation: 5s 12s  bgcolor forwards; */
+animation: 1s  bgcolor forwards;
+
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes color{
+    0%{
+        color: #000000;
+    }
+    100% {
+        color: white;
+    }
+}
+@keyframes text-blur-out {
+  0% {
+            
+            filter: blur(0.01);
+  }
+  50% {
+            
+            filter: blur(5);
+  }
+  100% {
+            filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes blink{
+0%{
+  opacity: 0;
+}
+100%{
+  opacity: 1;
+  color: #000000;
+}
+}
+@keyframes jump{
+  to{
+    opacity: 1;
+    transform: translateY(-5%);
+    filter: blur(0px);
+  }
+}
+
+/* intro */
+
+.text {
+  position: fixed;
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  left: 46%;
+  background-color: rgb(0, 0, 0);
+  transform: translateX(-36%) translateY(-100%);
+  list-style: none;
+  animation: text-blur-out 4s ease-in-out 3.5s forwards;
+  border-bottom: 0;
+}
+
+.text.hidden {
+  border-bottom: 1px solid #ffffff;
+}
+.text li {
+  /* display: inline-block; */
+  float: left;
+  font-weight: 700;
+  font-size: 4.6vw;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+  transition: all 1.1s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+/* intro end*/
+/* gallery */
+#gallery {
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeIn 17s ease-in-out 4s forwards;
+      margin: -0.5%;
+    }
+    #image-container {
+      display: flex;
+      transition: transform 2s ease-in-out;
+    }
+    .gallery-image {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 80.5%;
+      max-height: 99.7vh;
+    }
+    @media (max-width: 968px) {
+      .gallery-image{
+         max-height: 60vh;
+      }}
+    .ramsen-title{
+    transition: color 2s 1s ease-in-out;
+    }
+    #hiddenDiv {
+      animation: jump 1s ease-in-out forwards;
+    }
+    .events-gallery-row {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 0 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2vw;
+}
+.events-gallery-row::-webkit-scrollbar {
+  height: 12px; /* Set the height of the scrollbar */
+}
+.events-gallery-row::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb transparent */
+}
+.events-gallery-row::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
+}
+.events-gallery-column {
+  flex: 0 0 25%;
+  padding: 0 4px;
+}
+.events-gallery-text{
+  transition: 0.5s ease;
+  background-color: #ffffff;
+  margin-left: -64%;filter: grayscale(1);
+}
+.events-gallery-text:hover{
+  background-color: #000000;
+  font-weight: 500;
+  /* font-family: 'Courier New', Courier, monospace; */
+  color: #ffffff;
+}
+.events-gallery-column img {
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .events-gallery-column {
+    flex: 0 0 50%; /* Adjust flex properties for smaller screens */
+    max-width: 40%;
+    /* margin-top: -5%; */
+  }
+}
+/* gallery ends */
+/* booking */
+.Btn {
+  width: 90%;
+  height:70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -140%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+
+/* booking */
+/* recent stories */
+.recentstories{
+  background-color: white;color: #000000;
+  margin-top: 8%;font-size: 2.5vw;width: 25%;height: 15.5vw;text-align: center;display: flex;
+  border-radius: 2px;opacity: 0.6;
+}
+/* recent stories */
+
+</style>
+<!-- fonts  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Cinzel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Cinzel&family=Cormorant:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Cinzel&family=Cormorant:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cinzel&family=Cormorant:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cinzel&family=Cormorant:wght@300&family=DM+Sans:opsz,wght@9..40,200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cinzel&family=Cormorant:wght@300&family=DM+Sans:opsz,wght@9..40,200&family=Quicksand:wght@300&family=Text+Me+One&display=swap" rel="stylesheet">
+
+
+<!--  fonts  -->
+</head>
+<body>
+<div onscroll="handleScroll()">
+
+  <ul class="text hidden" style="font-family: 'Muli', sans-serif;">
+    <li>R</li>
+    <li class="ghost">a</li>
+    <li class="ghost">m</li>
+    <li>S</li>
+    <li class="ghost">e</li>
+    <li class="ghost">n</li>
+    <li class="spaced"></li>
+    <li class="ghost">&nbsp;P</li>
+    <li class="ghost">h</li>
+    <li class="ghost">o</li>
+    <li class="ghost">t</li>
+    <li class="ghost">o</li>
+    <li class="ghost">g</li>
+    <li class="ghost">r</li>
+    <li class="ghost">a</li>
+    <li class="ghost">p</li>
+    <li class="ghost">h</li>
+    <li class="ghost">y</li>  
+  </ul>
+
+  <!-- navbar -->
+  <div style="font-size: 0.70vw;margin-top: 2.5%;opacity: 0;position: fixed;gap: 10%;
+           display: flex;flex-direction: row;transform: translateX(0) translateY(0);animation: fadeIn 5s ease 3.3s forwards;z-index: 1;">
+    <h1 style="margin-left: 6%;margin-top: 3.5%;text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 270;font-family: 'Muli', sans-serif;">
+    <a href="ramsen.html" style="color: wheat;text-decoration: none;">Home</a></h1>
+    <h1 style="color: white;margin-top: 3.5%;text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 270;font-family: 'Muli', sans-serif;">blog</h1>
+    <h1 style="color: wheat;margin-top: 3.5%;text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 270;font-family: 'Muli', sans-serif;">Events</h1>
+  <div style="">
+    <h1 class="ramsen-title" id="ramsenTitle" style="color: rgb(243, 230, 205);margin-left: 49%;text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);font-weight: 500;font-size: 1.9vw;
+              opacity: 0;animation: fadeIn 9s 6s forwards;font-family: 'Bodoni Moda', serif;margin-top: 2.5%;">RAMSEN&nbsp;PHOTOGRAPHY<br>
+       <p style="font-size: 1.1vw;font-family: 'Caveat', cursive;animation: fadeIn 8s 8s forwards;opacity: 0;font-weight: 200;
+         margin-top: -2%;margin-left: 60%;"><text style="color: transparent;"></text>&nbsp;-&nbsp;we&nbsp;frame&nbsp;your&nbsp;joy&nbsp;&nbsp;-</p></h1>
+  </div>
+    <h1 style="color: wheat;margin-left: 43%;margin-top: 3.5%;text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 270;font-family: 'Muli', sans-serif;">Info</h1>
+    <h1 style="color: white;margin-top: 3.5%;text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 270;font-family: 'Muli', sans-serif;">Contact</h1>
+    <h1 style="color: white;margin-top: 3.5%;text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);font-weight: 270;font-family: 'Muli', sans-serif;">About</h1>
+  </div>
+  <ul class="text " style="opacity: 0;transform: translateX(-10%) translateY(10%);
+                animation:blink 2.3s 2s forwards,text-blur-out 3s ease-out 8s forwards, fadeIn 1s ease-out 3s forwards;">
+  <p style=" font-size: 1.3vw; font-family: 'Muli', sans-serif;color: white;border-bottom: 1px solid white;font-weight: 700;
+          font-family: 'Muli', sans-serif;">we frame your joy!</p>
+</ul>
+<!-- navbar -->
+
+
+<!-- gallery -->
+<div id="gallery" style="background-color: #000000;">
+    <div id="image-container">
+       <div class="gallery-image" style="overflow: hidden;"><img src="R:\PROJECT\ramsen\RAMSEN\OUTDOOR\_AM10420.JPG" alt="Image 3" style="height: auto;max-width:104.50%;
+          margin-top: -7%;margin-left: -3%;  pointer-events: none;"></div> 
+     <div class="gallery-image"><img src="R:\PROJECT\ramsen\RAMSEN\OUTDOOR\_AM10420.JPG" alt="Image 3" style="height: auto;max-width:100%;
+      margin-top: -5%;  pointer-events: none;"></div>    
+      <div class="gallery-image"><img src="R:\PROJECT\ramsen\RAMSEN\OUTDOOR\_AM10420.JPG" alt="Image 3" style="height: auto;max-width:100%;
+        margin-top: -5%;  pointer-events: none;"></div>     
+    </div>
+  </div>
+  <!-- gallery -->
+
+  <div  style="filter: blur(5%);margin-top: 5%;text-align: center;display: flex;flex-direction: column;font-family: 'DM Sans', sans-serif;
+   font-size: 1vw;">
+   <h1 style="font-weight: 50;">Hello!<br>we are the <text style="font-size: 2vw;">RAMSEN PHOTOGRAPHY</text> 
+      </h1>
+      <p>jnkjbjhbhjbjb<br>nkjbhjbhjbhj h bbbbbbbbbbbbbbbbbbb</p>
+  </div>
+
+<!-- events scroll -->
+  <div  class="events-gallery-row" style="margin-top: -3%;white-space: nowrap;gap: 5%;font-family: 'DM Sans', sans-serif;font-size: 2vw;overflow-y: hidden;">
+    <div class="events-gallery-column" style="display: flex; align-items: center; justify-content: center;margin-left: -3%;">
+      <img src="R:\PROJECT\ramsen\eventimage1.jpg" alt="Image 3" style="height:60%;pointer-events: none;width: 100%;filter: grayscale(60%);">
+      <text class="events-gallery-text" style=""><a href="wedding.html" style="text-decoration: none;">WEDDING</a></text>
+    </div>
+    <div class="events-gallery-column" style="display: flex; align-items: center; justify-content: center;">
+      <img src="R:\PROJECT\ramsen\RAMSEN\PUBERTY\ramsen-115.jpg" alt="Image 3" style="height:60%;pointer-events: none;filter: grayscale(0.8);">
+      <text class="events-gallery-text" style=""><a href="puberty.html" style="text-decoration: none;">PUBERTY</a></text>
+    </div>
+    <div class="events-gallery-column" style="display: flex; align-items: center; justify-content: center; ">
+      <img src="R:\PROJECT\ramsen\eventimage2.jpg" alt="Image 3" style="height: 60%;pointer-events: none;filter: grayscale(0.8);">
+      <text class="events-gallery-text" style=""><a href="outdoor.html" style="text-decoration: none;"> OUTDOOR</a></text>
+    </div>
+    <div class="events-gallery-column" style="display: flex; align-items: center; justify-content: center;">
+      <img src="R:\PROJECT\ramsen\RAMSEN\BABY\_AM104751.JPG" alt="Image 3" style="height: 60%;pointer-events: none;filter: grayscale(60%);">
+      <text class="events-gallery-text" style=""><a href="babyshoot.html" style="text-decoration: none;">BABYSHOOT</a></text>
+    </div>
+    <div class="events-gallery-column" style="display: flex; align-items: center; justify-content: center;">
+      <img src="R:\PROJECT\ramsen\eventimage2.jpg" alt="Image 3" style="height: 60%;pointer-events: none;filter: grayscale(0.8);">
+      <text class="events-gallery-text" style=""><a href="otherevents.html" style="text-decoration: none;">OTHER EVENTS</a></text>
+    </div>
+  </div>
+ <!-- events scroll -->
+
+
+<!-- event banner -->
+<div style="font-family: 'DM Sans', sans-serif;margin-left: -1%;display: flex;align-items: center; justify-content: center;margin-top: -1%;">
+ <img src="R:\PROJECT\ramsen\RAMSEN\eventbooking1.jpg" style="width: 100%;height: auto;pointer-events: none;">
+ <div style="display: flex;align-items: center;justify-content: center;margin-top: -3%;">
+  <text style="color: #ffffff;font-weight: 50;letter-spacing: 3px;font-size: 3.4vw;position: absolute;left: 3%;margin-top: -26%;">Book an event with Ramsen Photography!</text>
+  <text style="font-size: 1.5vw;font-family: 'Caveat', cursive;font-weight: 200;position: absolute;color: #c8c3c3;
+         margin-top: 8%;left: 4.5%;">wedding&nbsp;&nbsp;&nbsp;babyshoot&nbsp;&nbsp;&nbsp;&nbsp;outdoor</text>
+         <p style="color: #ffffff;font-weight: 50;letter-spacing: 3px;font-size: 1.4vw;position: absolute;left: 3%;margin-top: -16%;
+         font-family: 'DM Sans', sans-serif;"><text style="background-color: #ffffff;color: #000000;font-weight: 700;padding: 0.2%;">Over&nbsp;14&nbsp;years</text>&nbsp;of&nbsp;experience&nbsp;in&nbsp;photography</p>
+ <img src="R:\PROJECT\ramsen\eventlogo3.png" style="position: absolute;left: 4%;margin-top: 0%;width: 5.4%;height: auto;pointer-events: none;">
+ <img src="R:\PROJECT\ramsen\eventlogo2.png" style="position: absolute;left: 10.7%;margin-top: 0%;width: 4%;height: auto;pointer-events: none;">
+ <img src="R:\PROJECT\ramsen\eventlogo1.jpg" style="position: absolute;left: 16.5%;margin-top: 0%;width: 4%;height: auto;pointer-events: none;">
+ <a href="booking.html" style="position: absolute;left: 4%;margin-top: 30%;">
+ <button class="Btn" style="width: 120%;padding: 13%;font-size: 1vw;text-decoration: none;color: #ffffff;">
+   book&nbsp;now!
+ </button>
+</a>
+<a href="product.html" style="position: absolute;left: 12%;margin-top: 30%;">
+ <button class="Btn" style="font-size: 1vw;text-decoration: none;color: #ffffff;">
+  buy products
+</button>
+</a>
+</div>
+</div>
+
+<div style="margin-top: 5%;text-align: center;">
+  <p style="font-weight: 50;font-size: 2vw;font-family: 'DM Sans', sans-serif;color: #574c09;text-shadow: 10px 7px 18px rgba(40, 34, 4, 0.35);">RECENT STORIES</p>
+  <div style="display: flex;flex-direction: row;margin-top: 5%;gap:4%;margin-left: 4%;">
+  <img src="R:\PROJECT\ramsen\RAMSEN\WEDDING\DSC05269.JPG" style="width: 46%;height: auto;pointer-events: none;">
+  <text class="recentstories" style="margin-left: -40%;"><br><a href="ramsen.html" style="text-decoration: none;color: #000000;padding: 15%;">Bride&nbsp;&&nbsp;Groom<br>erode mahal</a></text>
+    <text class="recentstories" style="margin-left: 21.4%;"><br><a href="ramsen.html" style="text-decoration: none;color: #000000;padding: 15%;">Bride&nbsp;&&nbsp;Groom<br>erode mahal</a></text>
+  <img src="R:\PROJECT\ramsen\RAMSEN\WEDDING\_AM11516.JPG" style="margin-left: -39%;width: 46%;height: auto;pointer-events: none;">  
+  </div>
+  <div style="display: flex;flex-direction: row;gap: 4%;margin-left: 4%;margin-top: 4%;">
+    <img src="R:\PROJECT\ramsen\RAMSEN\OUTDOOR\_AM10437.JPG" style="width: 46%;height: auto;pointer-events: none;">
+    <text class="recentstories" style="margin-left: -40%;"><br><a href="ramsen.html" style="text-decoration: none;color: #000000;padding: 15%;">Bride&nbsp;&&nbsp;Groom<br>erode mahal</a></text>
+    <img src="R:\PROJECT\ramsen\RAMSEN\WEDDING\DSC_9998.JPG" style="width: 46%;height: auto;margin-left: 11.5%;pointer-events: none;">  
+    <text class="recentstories" style="margin-left: -40%;"><br><a href="ramsen.html" style="text-decoration: none;color: #000000;padding: 15%;">Bride&nbsp;&&nbsp;Groom<br>erode mahal</a></text>
+
+  </div>
+<!-- product banner -->
+<div style="font-family: 'DM Sans', sans-serif;display: flex;align-items: center; justify-content: center;">
+  <img src="R:\PROJECT\ramsen\RAMSEN\product_banner.jpg" style="width: 100%;height: auto;pointer-events: none;margin-top: 7%;">
+  <text style="color: #ffffff;font-weight: 50;letter-spacing: 3px;font-size: 3.4vw;position: absolute;left: 65%;margin-top: -16%;">!Try our products</text>
+  <img src="R:\PROJECT\ramsen\calendar.png" style="position: absolute;width: 13%;height: auto;margin-top: 8%;margin-left: -70%;pointer-events: none;">
+  <img src="R:\PROJECT\ramsen\photomug.png" style="position: absolute;width: 23%;height: auto;margin-top: 8%;margin-left: -46%;pointer-events: none;">
+  <img src="R:\PROJECT\ramsen\photo-frame (2).png" style="filter: brightness(90%);position: absolute;width: 11.3%;height: auto;margin-top: 7%;margin-left: -18%;pointer-events: none;">
+
+</div>
+ <!-- product banner -->
+
+<!-- event banner -->
+
+<!-- footer -->
+  <div style="display: flex;flex-direction: column;background-color: rgb(255, 246, 237);margin-top: 7%;">
+    <p style="font-weight: 50;font-size: 2.5vw;font-family: 'Text Me One', sans-serif;margin-top: 5%;">RAMSEN PHOTOGRAPHY</p>
+    <div style="display: flex;flex-direction: column;margin-top: 1%;margin-left: 12%;">
+      <img src="R:\PROJECT\ramsen\line.png" style="width: 8%;margin-top: -0.2%;margin-left: 18.5%;padding: 0px;">
+      <img src="R:\PROJECT\ramsen\line.png" style="width: 7.5%;height: auto;margin-left: 28.5%;">
+      <img src="R:\PROJECT\ramsen\line.png" style="width: 8.6%;margin-top: -0.2%;margin-left: 38.5%;padding: 0px;">
+      <img src="R:\PROJECT\ramsen\line.png" style="width: 7%;margin-top: -0.2%;margin-left: 49.5%;padding: 0px;">
+      <img src="R:\PROJECT\ramsen\line.png" style="width: 8%;margin-top: -0.2%;margin-left: 59.5%;padding: 0px;">
+
+    </div>
+    <div style="display: flex;flex-direction: column;margin-left: 13%;">
+      <text style="margin-top: 1%;margin-left: -58%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">Home</text>    
+      <text style="margin-top: -3%;margin-left: -37%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">services<br><p style="font-size: 0.9vw;margin-left: -1.7%;">wedding<br>puberty<br>outdoor<br>&emsp;babyshoot</p></text>
+        <text style="margin-top: -10.2%;margin-left: -15.5%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">company<br><p style="font-size: 0.9vw;margin-left: -1.8%;">about<br>contact<br>info</p></text>
+        <text style="margin-top: -8.7%;margin-left: 4%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">blog<br><p style="font-size: 0.9vw;margin-left: 1%;">view gallery</p></text>
+        <text style="margin-top: -6.4%;margin-left: 26%;font-weight: 600;font-size: 1.8vw;font-family: 'DM Sans', sans-serif;">booking<br><p style="font-size: 0.9vw;margin-left: 1%;">view gallery</p></text>
+
+      </div>
+      <text style="margin-top: 9%;font-size: 0.1vw;background-color: #000000;">................................................</text>
+      <text style="font-family: 'DM Sans', sans-serif;text-align: center;">Wedding | Puberty | outdoor | babyshoot | All events</text>
+      <!-- <text style="margin-top: 8%;margin-left: -35%;font-family: 'DM Sans', sans-serif;font-weight: 500;font-size: 2vw;">chat with us!</text>
+      <div style="width: 15vw;height: 4.5vh;border: 1px solid black;
+      border-radius: 2px;
+      margin: 0.625rem auto;"></div> -->
+  </div>
+<!-- footer -->
+
+</div>
+
+  <script>
+//js to Lock scrolling
+document.body.style.overflow = 'hidden';
+setTimeout(() => {
+document.body.style.overflow = 'auto';
+}, 100);
+//js to Lock scrolling 13200 
+// js to blur RAMSEN title
+
+// js to blur RAMSEN title
+    // RAMSEN text expand side
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => document.querySelector(".text").classList.remove("hidden"), 1000);
+      });
+// RAMSEN text expand side
+      const imageContainer = document.getElementById('image-container');
+      const title = document.querySelector('.ramsen-title');
+      const specifiedColors = ['black', 'white', 'white', 'white'];
+      let colorIndex = 0;
+      let isPaused = false;
+      let opacity = 1;
+
+      function scrollGallery() {
+        if (!isPaused) {
+          setTimeout(() => {
+            const firstImage = imageContainer.firstElementChild;
+            imageContainer.style.transition = 'transform 1.5s ease-in-out';
+            imageContainer.style.transform = `translateX(${-firstImage.offsetWidth}px)`;
+            changeTitleColor();
+            setTimeout(() => {
+              imageContainer.style.transition = 'none';
+              imageContainer.style.transform = 'translateX(0)';
+              imageContainer.appendChild(firstImage);
+              scrollGallery();
+            }, 2700);
+          }, 6000); //transition gap
+      }
+
+      function changeTitleColor() {
+        title.style.color = specifiedColors[colorIndex];
+        colorIndex = (colorIndex + 1) % specifiedColors.length;
+      }
+    }
+      setTimeout(() => scrollGallery(), 5000);
+
+      const hiddenDiv = document.getElementById('hiddenDiv');
+      window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY;
+        if (scrollY > 10) {
+          isPaused = true;
+          title.style.color = 'black';
+        } 
+        // else if (scrollY > 30) {
+        //   isPaused = true;
+        //   title.style.opacity = '0';
+        // } 
+        else if (scrollY < 10) {
+          isPaused = false;
+          title.style.opacity = '1';
+          title.style.color = specifiedColors[colorIndex];
+          setTimeout(() => scrollGallery(), 5000);
+        }
+      }
+      );
+
+// js for jump text
+document.addEventListener("DOMContentLoaded", function () {
+      const hiddenDiv = document.getElementById('hiddenDiv');
+      window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY;
+        const shouldTriggerAnimation = scrollY > 50;
+
+        if (shouldTriggerAnimation) {
+          hiddenDiv.classList.add('jump-animation-triggered');
+        } else {
+          hiddenDiv.classList.remove('jump-animation-triggered');
+        }
+      });
+    });
+// js for jump text
+</script>
+  </div>
+</body>
+</html>
